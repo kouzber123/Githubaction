@@ -29,7 +29,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytestt
         run: |
-          python unitTesting/test_math.py
+          pytest
       - name: Run hello world
         run: |
           python helloworld.py
