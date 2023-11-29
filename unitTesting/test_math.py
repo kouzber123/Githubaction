@@ -1,35 +1,35 @@
-import unittest
+import pytest
 import test
 
 
-class TestMathMethods(unittest.TestCase):
+class TestMathMethods():
 
     def testaddReturnFour(self):
         shouldBeFour = test.add(2, 2)
         answer = 4
-        self.assertEqual(shouldBeFour, answer)
+        assert shouldBeFour == answer
+
 
     def testReturnWrongEqual(self):
         four = test.add(2, 2)
         answer = 5
-        self.assertNotEqual(four, answer)
+        assert four != answer
 
     def testMultiplyCorrectAnswer(self):
         m = test.multiply(2, 2)
-        self.assertEqual(m, 4)
+        assert m == 4
 
     def testMultiplyIncorrectAnswer(self):
         m = test.multiply(2, 2)
-        self.assertNotEqual(m, 5)
+        assert m != 5
 
     def testPowerCorrect(self):
         p = test.power(2, 8)
-        self.assertEqual(p, 256)
+        assert p == 256
 
     def testPowerInCorrect(self):
         p = test.power(2, 7)
-        self.assertNotEqual(p, 256)
+        assert p != 256
 
 
-if __name__ == '__main__':
-    unittest.main()
+
