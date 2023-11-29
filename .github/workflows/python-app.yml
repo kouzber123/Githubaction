@@ -32,3 +32,6 @@ jobs:
     - name: Run hello world
       run: |
          python helloworld.py
+    - name: "Run py lint test"
+      run: |
+          python pylint/testLinting.py
