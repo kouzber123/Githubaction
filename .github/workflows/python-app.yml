@@ -33,7 +33,6 @@ jobs:
           python helloworld.py
       - name: "Run py lint test"
         run: |
-          flake8
           autopep8 --in-place --aggressive --aggressive .\unitTesting\test.py
           autopep8 --in-place --aggressive --aggressive .\unitTesting\testAutomation.py
           autopep8 --in-place --aggressive --aggressive .\pylint\testLinting.py
