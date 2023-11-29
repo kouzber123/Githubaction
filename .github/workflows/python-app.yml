@@ -34,4 +34,6 @@ jobs:
           python helloworld.py
       - name: "Run py lint test"
         run: |
-          autopep8 --in-place --aggressive --aggressive .\pylint\testLinting.py
+          autopep8 --in-place --aggressive --aggressive ./pylint/testLinting.py
+          autopep8 --in-place --aggressive --aggressive ./unitTesting/test.py
+          autopep8 --in-place --aggressive --aggressive ./unitTesting/testAutomation.py
